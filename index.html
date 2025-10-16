@@ -1,51 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platery - Food Recipe</title>
-    <link rel="shortcut icon" href="" type="image/png">
+    <title>Platery - Recipe Collection</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo_.svg">
 </head>
 <body>
-    <!-- NAVBAR -->
-    <header>
-        <div class="logo">🍽 Platery</div>
-        <nav class="nav-links">
-        <a href="#">Home</a>
-        <a href="#popular-recipes">Recipes</a>
-        <a href="#abou">About</a>
-        <a href="#contact">Contact</a>
-        </nav>
-        <button class="menu-toggle">☰</button>
+    <header class="navbar sticky-navbar">
+        <div class="container">
+            <nav class="nav-links">
+                <div class="logo"><img src="images/logo.svg" alt="Platery" class="logo"></div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" onclick="closeMenu()">Beranda</a></li>
+                    <li><a href="#recipes" onclick="closeMenu()">Resep</a></li>
+                    <li><a href="#about" onclick="closeMenu()">Tentang</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Cari resep favorit Anda...">
+                <button onclick="searchRecipes()">Cari</button>
+            </div>
+        </div>
     </header>
-    
-    <!-- HERO -->
+
     <section class="hero">
-        <h1>Welcome to Platery</h1>
-        <p>Discover, share, and cook delicious recipes from around the world 🌍</p>
-        <button>Explore Recipes</button>
+        <div class="container">
+            <h1>Temukan Resep Masakan Terbaik</h1>
+            <p>Ribuan resep lezat untuk setiap kesempatan</p>
+        </div>
     </section>
 
+    <main class="container">
+        <div class="categories" id="categories">
+            <button class="category-btn active" onclick="filterCategory('semua')">Semua</button>
+            <button class="category-btn" onclick="filterCategory('makanan')">Makanan</button>
+            <button class="category-btn" onclick="filterCategory('minuman')">Minuman</button>
+            <button class="category-btn" onclick="filterCategory('dessert')">Dessert</button>
+            <button class="category-btn" onclick="filterCategory('tradisional')">Tradisional</button>
+        </div>
 
-    <main>
-        <!-- SEARCH -->
-        <section class="search-bar">
-            <input type="text" id="searchInput" placeholder="Search recipes...">
-        </section>
+        <div class="recipes-grid" id="recipesGrid"></div>
+    </main>
 
-        <!-- POPULAR RECIPE -->
-        <section id="popular-recipes">
-            <h2>Popular Recipes</h2>
-            <div id="recipe-list">
+    <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <h2 id="modalTitle"></h2>
+                <div id="modalMeta" class="recipe-meta"></div>
             </div>
-        </section>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="" class="modal-image">
+                </div>
+                <div class="ingredients">
+                    <h3>Bahan-bahan:</h3>
+                    <ul id="modalIngredients"></ul>
+                </div>
+                <div class="instructions">
+                    <h3>Cara Membuat:</h3>
+                    <ol id="modalInstructions"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>© 2025 Platery.com. All right reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Platery. Dibuat untuk Tugas Akhir Kuliah.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
