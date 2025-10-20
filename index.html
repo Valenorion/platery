@@ -11,21 +11,36 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="header-content">
-            <a href="#" class="logo"><img src="images/logo.svg" alt="Platery"></a>
-    <!-- Navbar -->
+    <div class="header-content">
+        <!-- Logo -->
+        <a href="#" class="logo"><img src="images/logo.svg" alt="Platery"></a>
+
+        <!-- Hamburger-->
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        </label>
+
+        <!-- Navbar -->
         <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#">Beranda</a></li>
-                <li><a href="#">Resep</a></li>
-                <li><a href="#">Komunitas</a></li>
-                <li><a href="#">Artikel</a></li>
-                <li><a href="#">Tentang</a></li>
-                <li><a href="#">Kontak</a></li>
-            </ul>
-        </nav>  
+        <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Resep</a></li>
+            <li><a href="#">Komunitas</a></li>
+            <li><a href="#">Artikel</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+        </nav>
+
+        <!-- Tombol Header -->
+        <div class="header-buttons">
         </div>
+    </div>
     </header>
+
 
     <!-- Search Bar -->
     <div class="search-bar">
@@ -161,7 +176,7 @@
                 </div>
             </a>
         </div>
-        
+
     <!-- Modal Detail Resep -->
     <!-- Modal Resep 1 -->
     <div id="nasigoreng" class="modal">
