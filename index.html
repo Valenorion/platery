@@ -3,81 +3,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platery - Recipe Collection</title>
+    <title>Platery | Resep Masakan</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/logo_.svg">
+    <link rel="shortcut icon" href="images/logo_favicon.svg" type="image/x-icon">
+
 </head>
 <body>
-    <header class="navbar sticky-navbar">
-        <div class="container">
-            <nav class="nav-links">
-                <div class="logo"><img src="images/logo.svg" alt="Platery" class="logo"></div>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" onclick="closeMenu()">Beranda</a></li>
-                    <li><a href="#recipes" onclick="closeMenu()">Resep</a></li>
-                    <li><a href="#about" onclick="closeMenu()">Tentang</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Cari resep favorit Anda...">
-                <button onclick="searchRecipes()">Cari</button>
-            </div>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo"><img src="images/logo.svg" alt="Platery"></a>
+    <!-- Navbar -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Resep</a></li>
+                <li><a href="#">Komunitas</a></li>
+                <li><a href="#">Artikel</a></li>
+                <li><a href="#">Tentang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>  
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Temukan Resep Masakan Terbaik</h1>
-            <p>Ribuan resep lezat untuk setiap kesempatan</p>
-        </div>
-    </section>
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Cari resep, artikel, atau komunitas..." class="search-input">
+        <button class="search-button">Cari</button>
+    </div>     
 
-    <main class="container">
-        <div class="categories" id="categories">
-            <button class="category-btn active" onclick="filterCategory('semua')">Semua</button>
-            <button class="category-btn" onclick="filterCategory('makanan')">Makanan</button>
-            <button class="category-btn" onclick="filterCategory('minuman')">Minuman</button>
-            <button class="category-btn" onclick="filterCategory('dessert')">Dessert</button>
-            <button class="category-btn" onclick="filterCategory('tradisional')">Tradisional</button>
-        </div>
-
-        <div class="recipes-grid" id="recipesGrid"></div>
-    </main>
-
-    <div id="recipeModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close-btn" onclick="closeModal()">&times;</button>
-                <h2 id="modalTitle"></h2>
-                <div id="modalMeta" class="recipe-meta"></div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-image-container">
-                    <img id="modalImage" src="" alt="" class="modal-image">
-                </div>
-                <div class="ingredients">
-                    <h3>Bahan-bahan:</h3>
-                    <ul id="modalIngredients"></ul>
-                </div>
-                <div class="instructions">
-                    <h3>Cara Membuat:</h3>
-                    <ol id="modalInstructions"></ol>
+    <!-- Tampilan Utama -->
+    <div class="container">
+        <div class="featured">
+            <div class="featured-content">
+                <div class="featured-image">👨‍🍳</div>
+                <div class="featured-text">
+                    <h2>Bagikan Resep Favorit Anda</h2>
+                    <p>Jadilah bagian dari komunitas Platery dan bagikan resep lezat Anda dengan jutaan pengguna di seluruh Indonesia. Dapatkan tips memasak dari chef profesional dan pengguna lainnya.</p>
+                    <button class="btn-primary">Mulai Sekarang</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Resep -->
+    <div class="container">
+        <h2 class="section-title">Resep Populer</h2>
+
+    <!-- Kategori -->
+    <div class="categories">
+        <div class="categories-content">
+            <button class="category-btn">Semua</button>
+            <button class="category-btn">Makanan Indonesia</button>
+            <button class="category-btn">Dessert</button>
+            <button class="category-btn">Minuman</button>
+            <button class="category-btn">Diet</button>
+            <button class="category-btn">Vegetarian</button>
+            <button class="category-btn">Camilan</button>
+        </div>
+    </div>
+
+        <div class="recipe-grid">
+            <!-- Resep 1 -->
+            <a href="#nasigoreng" class="recipe-underline">
+                <div class="recipe-card">
+                <div class="recipe-image"><img src="images/nasigoreng.jpg" alt=""></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Mie Goreng Pedas Istimewa</h3>
+                    <p class="recipe-author">oleh Chef Budi</p>
+                    <div class="recipe-stats">
+                        <div class="recipe-stat">2.5K</div>
+                        <div class="recipe-stat">1.2K</div>
+                        <div class="recipe-stat">45 menit</div>
+                    </div>
+                </div>
+                </div>
+            </a>
+
+            <!-- Resep 2 -->
+            <a href="#soto" class="recipe-underline">
+                <div class="recipe-card">
+                <div class="recipe-image"><img src="images/soto.png" alt=""></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Mie Goreng Pedas Istimewa</h3>
+                    <p class="recipe-author">oleh Chef Budi</p>
+                    <div class="recipe-stats">
+                        <div class="recipe-stat">2.5K</div>
+                        <div class="recipe-stat">1.2K</div>
+                        <div class="recipe-stat">45 menit</div>
+                    </div>
+                </div>
+                </div>
+            </a>
+
+            <!-- Resep 3 -->
+            <a href="#gadogado" class="recipe-underline">
+                <div class="recipe-card">
+                <div class="recipe-image"><img src="images/gadogado.png" alt=""></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Gado - Gado</h3>
+                    <p class="recipe-author">oleh Chef Budi</p>
+                    <div class="recipe-stats">
+                        <div class="recipe-stat">2.5K</div>
+                        <div class="recipe-stat">1.2K</div>
+                        <div class="recipe-stat">45 menit</div>
+                    </div>
+                </div>
+                </div>
+            </a>
+
+            <!-- Resep 4 -->
+            <a href="#kuelapis" class="recipe-underline">
+                <div class="recipe-card">
+                <div class="recipe-image"><img src="images/kuelapis.png" alt=""></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Kue Lapis</h3>
+                    <p class="recipe-author">oleh Chef Budi</p>
+                    <div class="recipe-stats">
+                        <div class="recipe-stat">2.5K</div>
+                        <div class="recipe-stat">1.2K</div>
+                        <div class="recipe-stat">45 menit</div>
+                    </div>
+                </div>
+                </div>
+            </a>
+
+            <!-- Resep 5 -->
+            <a href="#pancake" class="recipe-underline">
+                <div class="recipe-card">
+                <div class="recipe-image"><img src="images/pancake.png" alt="Resep Pancake"></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Pancake</h3>
+                    <p class="recipe-author">oleh Chef Budi</p>
+                    <div class="recipe-stats">
+                        <div class="recipe-stat">2.5K</div>
+                        <div class="recipe-stat">1.2K</div>
+                        <div class="recipe-stat">45 menit</div>
+                    </div>
+                </div>
+                </div>
+            </a>
+
+            <!-- Resep 6 -->
+            <a href="#esteh" class="recipe-underline">
+                <div class="recipe-card">
+                <div class="recipe-image"><img src="images/esteh.png" alt=""></div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">Es Teh Manis</h3>
+                    <p class="recipe-author">oleh Chef Budi</p>
+                    <div class="recipe-stats">
+                        <div class="recipe-stat">2.5K</div>
+                        <div class="recipe-stat">1.2K</div>
+                        <div class="recipe-stat">45 menit</div>
+                    </div>
+                </div>
+                </div>
+            </a>
+        </div>
+        
+    <!-- Modal Detail Resep -->
+    <!-- Modal Resep 1 -->
+    <div id="nasigoreng" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Nasi Goreng Special</h2>
+        <img src="images/nasigoreng.jpg" alt="Mie Goreng Pedas Istimewa" class="modal-img">
+        <p><strong>Oleh:</strong> Chef Budi</p>
+        <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+        <h3>Bahan-bahan:</h3>
+        <ul>
+            <li>3 piring nasi putih</li>
+            <li>2 butir telur</li>
+            <li>2 sdm saus sambal</li>
+            <li>1 sdm kecap manis</li>
+            <li>Sayur dan topping sesuai selera</li>
+        </ul>
+
+        <h3>Cara Membuat:</h3>
+        <ol>
+            <li>Rebus mie hingga matang, tiriskan.</li>
+            <li>Tumis bawang putih, tambahkan bumbu dan mie.</li>
+            <li>Masak hingga bumbu meresap, sajikan hangat.</li>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal Resep 2 -->
+    <div id="soto" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Soto Ayam</h2>
+        <img src="images/soto.png" alt="Mie Goreng Pedas Istimewa" class="modal-img">
+        <p><strong>Oleh:</strong> Chef Budi</p>
+        <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+        <h3>Bahan-bahan:</h3>
+        <ul>
+            <li>2 bungkus mie telur</li>
+            <li>2 siung bawang putih, cincang</li>
+            <li>2 sdm saus sambal</li>
+            <li>1 sdm kecap manis</li>
+            <li>Sayur dan topping sesuai selera</li>
+        </ul>
+
+        <h3>Cara Membuat:</h3>
+        <ol>
+            <li>Rebus mie hingga matang, tiriskan.</li>
+            <li>Tumis bawang putih, tambahkan bumbu dan mie.</li>
+            <li>Masak hingga bumbu meresap, sajikan hangat.</li>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal Resep 3 -->
+    <div id="gadogado" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Gado - Gado</h2>
+        <img src="images/gadogado.png" alt="Mie Goreng Pedas Istimewa" class="modal-img">
+        <p><strong>Oleh:</strong> Chef Budi</p>
+        <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+        <h3>Bahan-bahan:</h3>
+        <ul>
+            <li>2 bungkus mie telur</li>
+            <li>2 siung bawang putih, cincang</li>
+            <li>2 sdm saus sambal</li>
+            <li>1 sdm kecap manis</li>
+            <li>Sayur dan topping sesuai selera</li>
+        </ul>
+
+        <h3>Cara Membuat:</h3>
+        <ol>
+            <li>Rebus mie hingga matang, tiriskan.</li>
+            <li>Tumis bawang putih, tambahkan bumbu dan mie.</li>
+            <li>Masak hingga bumbu meresap, sajikan hangat.</li>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal Resep 4 -->
+    <div id="kuelapis" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Kue Lapis</h2>
+        <img src="images/kuelapis.png" alt="Mie Goreng Pedas Istimewa" class="modal-img">
+        <p><strong>Oleh:</strong> Chef Budi</p>
+        <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+        <h3>Bahan-bahan:</h3>
+        <ul>
+            <li>2 bungkus mie telur</li>
+            <li>2 siung bawang putih, cincang</li>
+            <li>2 sdm saus sambal</li>
+            <li>1 sdm kecap manis</li>
+            <li>Sayur dan topping sesuai selera</li>
+        </ul>
+
+        <h3>Cara Membuat:</h3>
+        <ol>
+            <li>Rebus mie hingga matang, tiriskan.</li>
+            <li>Tumis bawang putih, tambahkan bumbu dan mie.</li>
+            <li>Masak hingga bumbu meresap, sajikan hangat.</li>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal Resep 5 -->
+    <div id="pancake" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Pancake</h2>
+        <img src="images/pancake.png" alt="Mie Goreng Pedas Istimewa" class="modal-img">
+        <p><strong>Oleh:</strong> Chef Budi</p>
+        <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+        <h3>Bahan-bahan:</h3>
+        <ul>
+            <li>2 bungkus mie telur</li>
+            <li>2 siung bawang putih, cincang</li>
+            <li>2 sdm saus sambal</li>
+            <li>1 sdm kecap manis</li>
+            <li>Sayur dan topping sesuai selera</li>
+        </ul>
+
+        <h3>Cara Membuat:</h3>
+        <ol>
+            <li>Rebus mie hingga matang, tiriskan.</li>
+            <li>Tumis bawang putih, tambahkan bumbu dan mie.</li>
+            <li>Masak hingga bumbu meresap, sajikan hangat.</li>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal Resep 6 -->
+    <div id="esteh" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <a href="#!" class="close">&times;</a>
+        <h2>Es Teh</h2>
+        <img src="images/esteh.png" alt="Mie Goreng Pedas Istimewa" class="modal-img">
+        <p><strong>Oleh:</strong> Chef Budi</p>
+        <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+        <h3>Bahan-bahan:</h3>
+        <ul>
+            <li>2 bungkus mie telur</li>
+            <li>2 siung bawang putih, cincang</li>
+            <li>2 sdm saus sambal</li>
+            <li>1 sdm kecap manis</li>
+            <li>Sayur dan topping sesuai selera</li>
+        </ul>
+
+        <h3>Cara Membuat:</h3>
+        <ol>
+            <li>Rebus mie hingga matang, tiriskan.</li>
+            <li>Tumis bawang putih, tambahkan bumbu dan mie.</li>
+            <li>Masak hingga bumbu meresap, sajikan hangat.</li>
+        </ol>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Platery. Dibuat untuk Tugas Akhir Kuliah.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Tentang ResepKu</h3>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kategori Resep</h3>
+                <ul>
+                    <li><a href="#">Makanan Indonesia</a></li>
+                    <li><a href="#">Dessert</a></li>
+                    <li><a href="#">Minuman</a></li>
+                    <li><a href="#">Camilan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Komunitas</h3>
+                <ul>
+                    <li><a href="#">Forum</a></li>
+                    <li><a href="#">Grup Resep</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Kompetisi</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Lisensi</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
