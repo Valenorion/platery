@@ -6,9 +6,9 @@
     <title>Platery | Resep Masakan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/logo_favicon.svg" type="image/x-icon">
-
 </head>
 <body>
+    <div id="beranda"></div>
     <!-- Header -->
     <header>
     <div class="header-content">
@@ -26,12 +26,10 @@
         <!-- Navbar -->
         <nav class="navbar">
         <ul class="nav-links">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Resep</a></li>
-            <li><a href="#">Komunitas</a></li>
-            <li><a href="#">Artikel</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Kontak</a></li>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#resep">Resep</a></li>
+            <li><a href="#komunitas">Komunitas</a></li>
+            <li><a href="#tentang">Tentang</a></li>
         </ul>
         </nav>
 
@@ -44,6 +42,7 @@
 
     <!-- Search Bar -->
     <div class="search-bar">
+        <img src="" alt="">
         <input type="text" placeholder="Cari resep, artikel, atau komunitas..." class="search-input">
         <button class="search-button">Cari</button>
     </div>     
@@ -52,7 +51,7 @@
     <div class="container">
         <div class="featured">
             <div class="featured-content">
-                <div class="featured-image"><img src="images/logo.svg" alt=""></div>
+                <div class="featured-image"><img src="images/hero.png" alt=""></div>
                 <div class="featured-text">
                     <h2>Bagikan Resep Favorit Anda</h2>
                     <p><strong>Platery</strong> adalah tempat berbagi resep, ide masakan, dan kreasi dapur dari para pecinta kuliner di seluruh Indonesia. Mulai dari masakan rumahan sederhana hingga hidangan spesial  semua bisa kamu temukan di sini! 
@@ -66,18 +65,18 @@
 
     <!-- Resep -->
     <div class="container">
-        <h2 class="section-title">Resep Populer</h2>
+        <h2 class="section-title" id = "resep">Resep Populer</h2>
 
     <!-- Kategori -->
     <div class="categories">
         <div class="categories-content">
             <button class="category-btn">Semua</button>
-            <button class="category-btn">Makanan Indonesia</button>
-            <button class="category-btn">Dessert</button>
-            <button class="category-btn">Minuman</button>
-            <button class="category-btn">Diet</button>
-            <button class="category-btn">Vegetarian</button>
-            <button class="category-btn">Camilan</button>
+            <button class="category-btn">Nusantara</button>
+            <button class="category-btn">Jawa</button>
+            <button class="category-btn">Sumatera</button>
+            <button class="category-btn">Kalimantan</button>
+            <button class="category-btn">Sulawesi</button>
+            <button class="category-btn">Minuman Tradisional</button>
         </div>
     </div>
 
@@ -181,204 +180,255 @@
         </div>
 
     <!-- Modal Detail Resep -->
-    <!-- Modal Resep 1 -->
-    <div id="nasigoreng" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <a href="#!" class="close">&times;</a>
-        <h2>Nasi Goreng Spesial</h2>
-        <img src="images/nasigoreng.jpg" alt="Nasi Goreng Special" class="modal-img">
-        <p><strong>Oleh:</strong> Chef Kukuh</p>
-        <p><strong>Waktu Masak:</strong> 45 menit</p>
+     <section>
+        <!-- Modal Resep 1 -->
+        <div id="nasigoreng" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Nasi Goreng Spesial</h2>
+            <img src="images/nasigoreng.jpg" alt="Nasi Goreng Special" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Kukuh</p>
+            <p><strong>Waktu Masak:</strong> 45 menit</p>
 
-        <h3>Bahan-bahan:</h3>
-        <ul>
-            <li>3 piring nasi putih</li>
-            <li>2 butir telur</li>
-            <li>3 siung bawang putih</li>
-            <li>5 siung bawang merah</li>
-            <li>2 sdm kecap manis</li>
-            <li>Cabai secukupnya</li>
-            <li>Minyak goreng</li>
-            
-        </ul>
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>3 piring nasi putih</li>
+                <li>2 butir telur</li>
+                <li>3 siung bawang putih</li>
+                <li>5 siung bawang merah</li>
+                <li>2 sdm kecap manis</li>
+                <li>Cabai secukupnya</li>
+                <li>Minyak goreng</li>
+                
+            </ul>
 
-        <h3>Cara Membuat:</h3>
-        <ol>
-            <li>aluskan bawang merah, bawang putih, dan cabai.</li>
-            <li>Panaskan minyak, tumis bumbu halus hingga harum.</li>
-            <li>Masukkan telur, orak-arik hingga matang.</li>
-            <li>Tambahkan nasi putih, aduk rata.</li>
-            <li>Beri kecap manis dan garam, aduk hingga merata.</li>
-            <li>Sajikan dengan kerupuk dan acar.</li>
-        </ol>
-        </div>
-    </div>
-    </div>
-
-    <!-- Modal Resep 2 -->
-    <div id="soto" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <a href="#!" class="close">&times;</a>
-        <h2>Soto Ayam</h2>
-        <img src="images/soto.png" alt="Soto Ayam" class="modal-img">
-        <p><strong>Oleh:</strong> Chef Nicko</p>
-        <p><strong>Waktu Masak:</strong> 45 menit</p>
-
-        <h3>Bahan-bahan:</h3>
-        <ul>
-            <li>500gr daging ayam</li>
-            <li>2 liter air</li>
-            <li>3 batang serai</li>
-            <li>5 lembar daun jeruk</li>
-            <li>Bumbu halus: bawang merah, putih, kunyit, jahe</li>
-            <li>Garam dan gula secukupnya</li>
-            <li>Pelengkap: telur rebus, tauge, bihun</li>
-        </ul>
-
-        <h3>Cara Membuat:</h3>
-        <ol>
-            <li>Rebus ayam hingga empuk, suwir-suwir.</li>
-            <li>Tumis bumbu halus dan serai hingga harum.</li>
-            <li>Masukkan bumbu tumis ke dalam kaldu ayam.</li>
-            <li>Tambahkan daun jeruk, garam, dan gula.</li>
-            <li>Masak hingga mendidih dan bumbu meresap.</li>
-            <li>Sajikan dengan pelengkap.</li>
-        </ol>
-        </div>
-    </div>
-    </div>
-
-    <!-- Modal Resep 3 -->
-    <div id="gadogado" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <a href="#!" class="close">&times;</a>
-        <h2>Gado - Gado</h2>
-        <img src="images/gadogado.png" alt="Gado - Gado" class="modal-img">
-        <p><strong>Oleh:</strong> Chef Rachul</p>
-        <p><strong>Waktu Masak:</strong> 45 menit</p>
-
-        <h3>Bahan-bahan:</h3>
-        <ul>
-            <li>Kangkung, kol, tauge, kentang rebus</li>
-            <li>Telur rebus</li>
-            <li>Tahu dan tempe goreng</li>
-            <li>Bumbu kacang: kacang tanah, cabai, bawang putih, gula merah</li>
-            <li>Kerupuk</li>
-        </ul>
-
-        <h3>Cara Membuat:</h3>
-        <ol>
-            <li>Rebus semua sayuran hingga matang.</li>
-            <li>Goreng tahu dan tempe.</li>
-            <li>Haluskan bumbu kacang dengan sedikit air.</li>
-            <li>Masak bumbu kacang hingga mengental.</li>
-            <li>Tata sayuran, tahu, tempe, dan telur di piring.</li>
-            <li>Siram dengan bumbu kacang, tambahkan kerupuk.</li>
-        </ol>
-        </div>
-    </div>
-    </div>
-
-    <!-- Modal Resep 4 -->
-    <div id="kuelapis" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <a href="#!" class="close">&times;</a>
-        <h2>Kue Lapis</h2>
-        <img src="images/kuelapis.png" alt="Kue Lapis" class="modal-img">
-        <p><strong>Oleh:</strong> Chef Arnold</p>
-        <p><strong>Waktu Masak:</strong> 45 menit</p>
-
-        <h3>Bahan-bahan:</h3>
-        <ul>
-            <li>250 gram tepung beras</li>
-            <li>100 gram tepung tapioka</li>
-            <li>200 gram gula pasir</li>
-            <li>800 ml santan, dimasak hingga hangat</li>
-            <li>Pewarna makanan merah dan hijau secukupnya</li>
-            <li>Sejumput garam</li>
-            <li>Daun pandan (opsional, untuk aroma)</li>
-        </ul>
-
-        <h3>Cara Membuat:</h3>
-        <ol>
-            <li>Campur tepung beras, tepung tapioka, gula pasir, dan garam dalam wadah besar. Aduk rata.</li>
-            <li>Tuang santan hangat sedikit demi sedikit sambil diaduk hingga adonan licin dan tidak menggumpal.</li>
-            <li>Bagi adonan menjadi tiga bagian; beri pewarna merah pada satu bagian, hijau pada satu bagian, dan biarkan satu bagian tanpa pewarna (putih).</li>
-            <li>Panaskan kukusan. Tuang satu lapisan adonan (misalnya warna merah) ke dalam loyang, kukus selama 5 menit.</li>
-            <li>Tuang lapisan berikutnya (misalnya putih), kukus lagi 5 menit. Ulangi hingga adonan habis dan semua lapisan terbentuk.</li>
-            <li>Setelah lapisan terakhir dituang, kukus selama 15 menit agar matang sempurna.</li>
-            <li>Angkat, biarkan dingin, lalu potong sesuai selera sebelum disajikan.</li>
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>aluskan bawang merah, bawang putih, dan cabai.</li>
+                <li>Panaskan minyak, tumis bumbu halus hingga harum.</li>
+                <li>Masukkan telur, orak-arik hingga matang.</li>
+                <li>Tambahkan nasi putih, aduk rata.</li>
+                <li>Beri kecap manis dan garam, aduk hingga merata.</li>
+                <li>Sajikan dengan kerupuk dan acar.</li>
             </ol>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Resep 2 -->
+        <div id="soto" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Soto Ayam</h2>
+            <img src="images/soto.png" alt="Soto Ayam" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Nicko</p>
+            <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>500gr daging ayam</li>
+                <li>2 liter air</li>
+                <li>3 batang serai</li>
+                <li>5 lembar daun jeruk</li>
+                <li>Bumbu halus: bawang merah, putih, kunyit, jahe</li>
+                <li>Garam dan gula secukupnya</li>
+                <li>Pelengkap: telur rebus, tauge, bihun</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Rebus ayam hingga empuk, suwir-suwir.</li>
+                <li>Tumis bumbu halus dan serai hingga harum.</li>
+                <li>Masukkan bumbu tumis ke dalam kaldu ayam.</li>
+                <li>Tambahkan daun jeruk, garam, dan gula.</li>
+                <li>Masak hingga mendidih dan bumbu meresap.</li>
+                <li>Sajikan dengan pelengkap.</li>
+            </ol>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Resep 3 -->
+        <div id="gadogado" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Gado - Gado</h2>
+            <img src="images/gadogado.png" alt="Gado - Gado" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Rachul</p>
+            <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>Kangkung, kol, tauge, kentang rebus</li>
+                <li>Telur rebus</li>
+                <li>Tahu dan tempe goreng</li>
+                <li>Bumbu kacang: kacang tanah, cabai, bawang putih, gula merah</li>
+                <li>Kerupuk</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Rebus semua sayuran hingga matang.</li>
+                <li>Goreng tahu dan tempe.</li>
+                <li>Haluskan bumbu kacang dengan sedikit air.</li>
+                <li>Masak bumbu kacang hingga mengental.</li>
+                <li>Tata sayuran, tahu, tempe, dan telur di piring.</li>
+                <li>Siram dengan bumbu kacang, tambahkan kerupuk.</li>
+            </ol>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Resep 4 -->
+        <div id="kuelapis" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Kue Lapis</h2>
+            <img src="images/kuelapis.png" alt="Kue Lapis" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Arnold</p>
+            <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>250 gram tepung beras</li>
+                <li>100 gram tepung tapioka</li>
+                <li>200 gram gula pasir</li>
+                <li>800 ml santan, dimasak hingga hangat</li>
+                <li>Pewarna makanan merah dan hijau secukupnya</li>
+                <li>Sejumput garam</li>
+                <li>Daun pandan (opsional, untuk aroma)</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Campur tepung beras, tepung tapioka, gula pasir, dan garam dalam wadah besar. Aduk rata.</li>
+                <li>Tuang santan hangat sedikit demi sedikit sambil diaduk hingga adonan licin dan tidak menggumpal.</li>
+                <li>Bagi adonan menjadi tiga bagian; beri pewarna merah pada satu bagian, hijau pada satu bagian, dan biarkan satu bagian tanpa pewarna (putih).</li>
+                <li>Panaskan kukusan. Tuang satu lapisan adonan (misalnya warna merah) ke dalam loyang, kukus selama 5 menit.</li>
+                <li>Tuang lapisan berikutnya (misalnya putih), kukus lagi 5 menit. Ulangi hingga adonan habis dan semua lapisan terbentuk.</li>
+                <li>Setelah lapisan terakhir dituang, kukus selama 15 menit agar matang sempurna.</li>
+                <li>Angkat, biarkan dingin, lalu potong sesuai selera sebelum disajikan.</li>
+                </ol>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Resep 5 -->
+        <div id="pancake" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Pancake</h2>
+            <img src="images/pancake.png" alt="Pancake" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Juna</p>
+            <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>200gr tepung terigu</li>
+                <li>2 butir telur</li>
+                <li>250ml susu cair</li>
+                <li>3 sdm gula</li>
+                <li>1 sdt baking powder</li>
+                <li>Coklat leleh untuk topping</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Campur tepung, gula, dan baking powder.</li>
+                <li>Kocok telur dan susu dalam wadah terpisah.</li>
+                <li>Campurkan adonan basah dan kering.</li>
+                <li>Panaskan teflon, tuang adonan.</li>
+                <li>Masak hingga muncul gelembung, balik.</li>
+                <li>Sajikan dengan topping coklat.</li>
+            </ol>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Resep 6 -->
+        <div id="esteh" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Es Teh</h2>
+            <img src="images/esteh.png" alt="Es Teh" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Renatta</p>
+            <p><strong>Waktu Masak:</strong> 10 menit</p>
+
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>2 kantong teh celup</li>
+                <li>3 sdm gula pasir</li>
+                <li>500ml air panas</li>
+                <li>Es batu secukupnya</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Seduh teh dengan air panas.</li>
+                <li>Tambahkan gula, aduk hingga larut</li>
+                <li>Biarkan hingga dingin.</li>
+                <li>Tuang ke gelas berisi es batu.</li>
+                <li>Sajikan segera.</li>
+            </ol>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Komunitas -->
+<section class="container">
+    <h2 class="section-title" id="komunitas">Komunitas Platery</h2>
+
+    <p class="community-desc">
+        Komunitas Platery adalah ruang berkumpulnya para pecinta masakan Indonesia.
+        Di sini, kamu bisa berbagi resep, berdiskusi seputar teknik memasak,
+        serta saling menginspirasi melalui kreasi dapur dari berbagai daerah.
+    </p>
+
+    <div class="community-grid">
+        <div class="community-card">
+            <h3>Diskusi & Tips</h3>
+            <p>
+                Bertanya dan berbagi tips memasak bersama pengguna lain,
+                mulai dari pemula hingga yang sudah berpengalaman.
+            </p>
+        </div>
+
+        <div class="community-card">
+            <h3>Berbagi Resep</h3>
+            <p>
+                Bagikan resep andalanmu dan biarkan orang lain mencoba
+                kreasi masakan khas buatanmu sendiri.
+            </p>
+        </div>
+
+        <div class="community-card">
+            <h3>Event & Tantangan</h3>
+            <p>
+                Ikuti berbagai event dan tantangan memasak menarik
+                yang diadakan oleh komunitas Platery.
+            </p>
         </div>
     </div>
+
+    <div class="community-cta">
+        <p>
+            Punya resep favorit yang ingin kamu bagikan?
+            Ayo berkontribusi dan jadi bagian dari komunitas Platery!
+        </p>
+        <a href="form.html" class="btn-primary">
+            Bagikan Resep Saya
+        </a>
     </div>
+</section>
 
-    <!-- Modal Resep 5 -->
-    <div id="pancake" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <a href="#!" class="close">&times;</a>
-        <h2>Pancake</h2>
-        <img src="images/pancake.png" alt="Pancake" class="modal-img">
-        <p><strong>Oleh:</strong> Chef Juna</p>
-        <p><strong>Waktu Masak:</strong> 45 menit</p>
 
-        <h3>Bahan-bahan:</h3>
-        <ul>
-            <li>200gr tepung terigu</li>
-            <li>2 butir telur</li>
-            <li>250ml susu cair</li>
-            <li>3 sdm gula</li>
-            <li>1 sdt baking powder</li>
-            <li>Coklat leleh untuk topping</li>
-        </ul>
-
-        <h3>Cara Membuat:</h3>
-        <ol>
-            <li>Campur tepung, gula, dan baking powder.</li>
-            <li>Kocok telur dan susu dalam wadah terpisah.</li>
-            <li>Campurkan adonan basah dan kering.</li>
-            <li>Panaskan teflon, tuang adonan.</li>
-            <li>Masak hingga muncul gelembung, balik.</li>
-            <li>Sajikan dengan topping coklat.</li>
-        </ol>
-        </div>
-    </div>
-    </div>
-
-    <!-- Modal Resep 6 -->
-    <div id="esteh" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <a href="#!" class="close">&times;</a>
-        <h2>Es Teh</h2>
-        <img src="images/esteh.png" alt="Es Teh" class="modal-img">
-        <p><strong>Oleh:</strong> Chef Renatta</p>
-        <p><strong>Waktu Masak:</strong> 10 menit</p>
-
-        <h3>Bahan-bahan:</h3>
-        <ul>
-            <li>2 kantong teh celup</li>
-            <li>3 sdm gula pasir</li>
-            <li>500ml air panas</li>
-            <li>Es batu secukupnya</li>
-        </ul>
-
-        <h3>Cara Membuat:</h3>
-        <ol>
-            <li>Seduh teh dengan air panas.</li>
-            <li>Tambahkan gula, aduk hingga larut</li>
-            <li>Biarkan hingga dingin.</li>
-            <li>Tuang ke gelas berisi es batu.</li>
-            <li>Sajikan segera.</li>
-        </ol>
-        </div>
-    </div>
-    </div>
 
     <!-- Footer -->
     <footer>
