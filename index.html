@@ -70,21 +70,18 @@
     <!-- Kategori -->
     <div class="categories">
         <div class="categories-content">
-            <button class="category-btn">Semua</button>
-            <button class="category-btn">Nusantara</button>
-            <button class="category-btn">Jawa</button>
-            <button class="category-btn">Sumatera</button>
-            <button class="category-btn">Kalimantan</button>
-            <button class="category-btn">Sulawesi</button>
-            <button class="category-btn">Minuman Tradisional</button>
+            <button class="category-btn" data-filter="semua">Semua</button>
+            <button class="category-btn" data-filter="nasi">Nasi</button>
+            <button class="category-btn" data-filter="camilan">Camilan</button>
+            <button class="category-btn" data-filter="sup">Sup</button>
+            <button class="category-btn" data-filter="minuman">Minuman</button>
         </div>
     </div>
 
         <div class="recipe-grid">
-            
             <!-- Resep 1 -->
             <a href="#nasigoreng" class="recipe-underline">
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="nasi">
                 <div class="recipe-image"><img src="images/nasigoreng.jpg" alt="Nasi Goreng Spesial"></div>
                 <div class="recipe-content">
                     <h3 class="recipe-title">Nasi Goreng</h3>
@@ -100,7 +97,7 @@
 
             <!-- Resep 2 -->
             <a href="#soto" class="recipe-underline">
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="sup">
                 <div class="recipe-image"><img src="images/soto.png" alt="Soto Ayam"></div>
                 <div class="recipe-content">
                     <h3 class="recipe-title">Soto Ayam</h3>
@@ -116,7 +113,7 @@
 
             <!-- Resep 3 -->
             <a href="#gadogado" class="recipe-underline">
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="camilan">
                 <div class="recipe-image"><img src="images/gadogado.png" alt="Gado - Gado"></div>
                 <div class="recipe-content">
                     <h3 class="recipe-title">Gado - Gado</h3>
@@ -132,7 +129,7 @@
 
             <!-- Resep 4 -->
             <a href="#kuelapis" class="recipe-underline">
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="camilan">
                 <div class="recipe-image"><img src="images/kuelapis.png" alt="Kue Lapis"></div>
                 <div class="recipe-content">
                     <h3 class="recipe-title">Kue Lapis</h3>
@@ -147,34 +144,94 @@
             </a>
 
             <!-- Resep 5 -->
-            <a href="#pancake" class="recipe-underline">
-                <div class="recipe-card">
-                <div class="recipe-image"><img src="images/pancake.png" alt="Pancake"></div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Pancake</h3>
-                    <p class="recipe-author">oleh Chef Juna</p>
-                    <div class="recipe-stats">
-                        <div class="recipe-stat">2.5K</div>
-                        <div class="recipe-stat">1.2K</div>
-                        <div class="recipe-stat">45 menit</div>
+            <a href="#ondeonde" class="recipe-underline">
+                <div class="recipe-card" data-category="camilan">
+                    <div class="recipe-image">
+                        <img src="images/ondeonde.png" alt="Onde-Onde">
                     </div>
-                </div>
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Onde-Onde</h3>
+                        <p class="recipe-author">oleh Chef Tradisi</p>
+                        <div class="recipe-stats">
+                            <div class="recipe-stat">1.8K</div>
+                            <div class="recipe-stat">900</div>
+                            <div class="recipe-stat">40 menit</div>
+                        </div>
+                    </div>
                 </div>
             </a>
 
             <!-- Resep 6 -->
-            <a href="#esteh" class="recipe-underline">
-                <div class="recipe-card">
-                <div class="recipe-image"><img src="images/esteh.png" alt="Es Teh"></div>
-                <div class="recipe-content">
-                    <h3 class="recipe-title">Es Teh</h3>
-                    <p class="recipe-author">oleh Chef Renatta</p>
-                    <div class="recipe-stats">
-                        <div class="recipe-stat">2.5K</div>
-                        <div class="recipe-stat">1.2K</div>
-                        <div class="recipe-stat">45 menit</div>
+            <a href="#pastel" class="recipe-underline">
+                <div class="recipe-card" data-category="camilan">
+                    <div class="recipe-image">
+                        <img src="images/pastel.png" alt="Pastel Isi Ayam">
+                    </div>
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Pastel</h3>
+                        <p class="recipe-author">oleh Chef Ramsay</p>
+                        <div class="recipe-stats">
+                            <div class="recipe-stat">3.1K</div>
+                            <div class="recipe-stat">1.6K</div>
+                            <div class="recipe-stat">60 menit</div>
+                        </div>
                     </div>
                 </div>
+            </a>
+
+
+            <!-- Resep 7 -->
+            <a href="#esdawet" class="recipe-underline">
+                <div class="recipe-card" data-category="minuman">
+                    <div class="recipe-image">
+                        <img src="images/esdawet.png" alt="Es Dawet">
+                    </div>
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Es Dawet</h3>
+                        <p class="recipe-author">oleh Chef Tradisional</p>
+                        <div class="recipe-stats">
+                            <div class="recipe-stat">1.8K</div>
+                            <div class="recipe-stat">950</div>
+                            <div class="recipe-stat">20 menit</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Resep 8 -->
+            <a href="#espisangijo" class="recipe-underline">
+                <div class="recipe-card" data-category="minuman">
+                    <div class="recipe-image">
+                        <img src="images/espisangijo.png" alt="Es Pisang Ijo">
+                    </div>
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Es Pisang Ijo</h3>
+                        <p class="recipe-author">oleh Chef Andi</p>
+                        <div class="recipe-stats">
+                            <div class="recipe-stat">3.1K</div>
+                            <div class="recipe-stat">1.6K</div>
+                            <div class="recipe-stat">30 menit</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+
+            <!-- Resep 9 -->
+            <a href="#kolakpisang" class="recipe-underline">
+                <div class="recipe-card" data-category="camilan">
+                    <div class="recipe-image">
+                        <img src="images/kolak.png" alt="Kolak Pisang">
+                    </div>
+                    <div class="recipe-content">
+                        <h3 class="recipe-title">Kolak Pisang</h3>
+                        <p class="recipe-author">oleh Chef Abdi</p>
+                        <div class="recipe-stats">
+                            <div class="recipe-stat">3.1K</div>
+                            <div class="recipe-stat">1.6K</div>
+                            <div class="recipe-stat">40 menit</div>
+                        </div>
+                    </div>
                 </div>
             </a>
         </div>
@@ -318,120 +375,268 @@
         </div>
 
         <!-- Modal Resep 5 -->
-        <div id="pancake" class="modal">
+        <div id="ondeonde" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <a href="#!" class="close">&times;</a>
+                    <h2>Onde-Onde</h2>
+                    <img src="images/ondeonde.png" alt="Onde-Onde" class="modal-img">
+                    <p><strong>Oleh:</strong> Chef Abdi</p>
+                    <p><strong>Waktu Masak:</strong> 45 menit</p>
+
+                    <h3>Bahan-bahan:</h3>
+                    <ul>
+                        <li>250 gram tepung ketan</li>
+                        <li>150 ml air hangat</li>
+                        <li>100 gram gula pasir</li>
+                        <li>1/2 sdt garam</li>
+                        <li>150 gram kacang hijau kupas</li>
+                        <li>75 gram gula merah, sisir</li>
+                        <li>1 lembar daun pandan</li>
+                        <li>Wijen secukupnya</li>
+                        <li>Minyak goreng secukupnya</li>
+                    </ul>
+
+                    <h3>Cara Membuat:</h3>
+                    <ol>
+                        <li>Rebus kacang hijau hingga empuk, haluskan bersama gula merah dan daun pandan.</li>
+                        <li>Masak adonan isian hingga kalis, lalu dinginkan dan bentuk bulat kecil.</li>
+                        <li>Campur tepung ketan, gula pasir, dan garam.</li>
+                        <li>Tuang air hangat sedikit demi sedikit sambil diuleni hingga adonan bisa dibentuk.</li>
+                        <li>Ambil adonan, pipihkan, isi dengan kacang hijau, lalu bulatkan.</li>
+                        <li>Gulingkan adonan ke wijen hingga seluruh permukaan tertutup.</li>
+                        <li>Goreng dalam minyak panas dengan api kecil sambil dibolak-balik hingga mengembang dan berwarna keemasan.</li>
+                        <li>Angkat dan tiriskan, onde-onde siap disajikan.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+            <!-- Modal Resep 6 -->
+        <div id="pastel" class="modal">
         <div class="modal-dialog">
             <div class="modal-content">
             <a href="#!" class="close">&times;</a>
-            <h2>Pancake</h2>
-            <img src="images/pancake.png" alt="Pancake" class="modal-img">
-            <p><strong>Oleh:</strong> Chef Juna</p>
+            <h2>Pastel Goreng</h2>
+            <img src="images/pastel.png" alt="Pastel Goreng" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Rumahan</p>
             <p><strong>Waktu Masak:</strong> 45 menit</p>
 
             <h3>Bahan-bahan:</h3>
             <ul>
-                <li>200gr tepung terigu</li>
-                <li>2 butir telur</li>
-                <li>250ml susu cair</li>
-                <li>3 sdm gula</li>
-                <li>1 sdt baking powder</li>
-                <li>Coklat leleh untuk topping</li>
+                <li>250 gram tepung terigu</li>
+                <li>1 butir telur</li>
+                <li>50 gram margarin</li>
+                <li>½ sdt garam</li>
+                <li>Air secukupnya</li>
+                <li>Minyak goreng secukupnya</li>
+            </ul>
+
+            <h3>Bahan Isian:</h3>
+            <ul>
+                <li>2 buah wortel, potong dadu kecil</li>
+                <li>100 gram kentang, potong dadu</li>
+                <li>50 gram bihun, seduh</li>
+                <li>2 siung bawang putih, cincang</li>
+                <li>1 siung bawang merah, iris</li>
+                <li>Garam dan merica secukupnya</li>
             </ul>
 
             <h3>Cara Membuat:</h3>
             <ol>
-                <li>Campur tepung, gula, dan baking powder.</li>
-                <li>Kocok telur dan susu dalam wadah terpisah.</li>
-                <li>Campurkan adonan basah dan kering.</li>
-                <li>Panaskan teflon, tuang adonan.</li>
-                <li>Masak hingga muncul gelembung, balik.</li>
-                <li>Sajikan dengan topping coklat.</li>
+                <li>Campurkan tepung, margarin, telur, dan garam, uleni sambil ditambahkan air hingga kalis.</li>
+                <li>Tumis bawang merah dan bawang putih hingga harum.</li>
+                <li>Masukkan wortel, kentang, dan bihun, bumbui garam dan merica, masak hingga matang.</li>
+                <li>Gilas adonan, beri isian, lalu lipat dan pilin pinggirannya.</li>
+                <li>Goreng pastel dalam minyak panas hingga kuning keemasan.</li>
+                <li>Angkat dan sajikan selagi hangat.</li>
             </ol>
             </div>
         </div>
         </div>
 
-        <!-- Modal Resep 6 -->
-        <div id="esteh" class="modal">
+        <!-- Modal Resep 7 -->
+        <div id="esdawet" class="modal">
         <div class="modal-dialog">
             <div class="modal-content">
             <a href="#!" class="close">&times;</a>
-            <h2>Es Teh</h2>
-            <img src="images/esteh.png" alt="Es Teh" class="modal-img">
-            <p><strong>Oleh:</strong> Chef Renatta</p>
-            <p><strong>Waktu Masak:</strong> 10 menit</p>
+            <h2>Es Dawet</h2>
+            <img src="images/esdawet.png" alt="Es Dawet" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Tradisional</p>
+            <p><strong>Waktu Masak:</strong> 40 menit</p>
+
+            <h3>Bahan-bahan Dawet:</h3>
+            <ul>
+                <li>100 gram tepung beras</li>
+                <li>20 gram tepung tapioka</li>
+                <li>700 ml air</li>
+                <li>Air daun pandan & suji secukupnya</li>
+                <li>Sejumput garam</li>
+            </ul>
+
+            <h3>Bahan Kuah Santan:</h3>
+            <ul>
+                <li>500 ml santan kental</li>
+                <li>½ sdt garam</li>
+                <li>2 lembar daun pandan</li>
+            </ul>
+
+            <h3>Bahan Gula Merah:</h3>
+            <ul>
+                <li>200 gram gula merah, sisir</li>
+                <li>100 ml air</li>
+                <li>1 lembar daun pandan</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Campurkan tepung beras, tepung tapioka, garam, air, dan air pandan, aduk rata.</li>
+                <li>Masak adonan hingga mengental dan meletup.</li>
+                <li>Cetak dawet menggunakan saringan ke dalam air es.</li>
+                <li>Rebus santan bersama daun pandan dan garam hingga matang, dinginkan.</li>
+                <li>Masak gula merah dengan air dan daun pandan hingga larut, saring.</li>
+                <li>Sajikan dawet dengan santan, gula merah, dan es batu.</li>
+            </ol>
+            </div>
+        </div>
+        </div>
+
+        <!-- Modal Resep 8 -->
+        <div id="espisangijo" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Es Pisang Ijo</h2>
+            <img src="images/espisangijo.png" alt="Es Pisang Ijo" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Makassar</p>
+            <p><strong>Waktu Masak:</strong> 45 menit</p>
 
             <h3>Bahan-bahan:</h3>
             <ul>
-                <li>2 kantong teh celup</li>
-                <li>3 sdm gula pasir</li>
-                <li>500ml air panas</li>
+                <li>6 buah pisang raja matang</li>
+                <li>100 gram tepung beras</li>
+                <li>50 gram tepung tapioka</li>
+                <li>400 ml santan</li>
+                <li>80 gram gula pasir</li>
+                <li>½ sdt garam</li>
+                <li>Pasta pandan secukupnya</li>
+                <li>Daun pisang untuk membungkus</li>
+            </ul>
+
+            <h3>Bahan Saus Santan:</h3>
+            <ul>
+                <li>500 ml santan</li>
+                <li>2 sdm tepung beras</li>
+                <li>½ sdt garam</li>
+                <li>2 lembar daun pandan</li>
+            </ul>
+
+            <h3>Bahan Pelengkap:</h3>
+            <ul>
+                <li>Sirup merah (sirup cocopandan)</li>
+                <li>Susu kental manis</li>
                 <li>Es batu secukupnya</li>
             </ul>
 
             <h3>Cara Membuat:</h3>
             <ol>
-                <li>Seduh teh dengan air panas.</li>
-                <li>Tambahkan gula, aduk hingga larut</li>
-                <li>Biarkan hingga dingin.</li>
-                <li>Tuang ke gelas berisi es batu.</li>
-                <li>Sajikan segera.</li>
+                <li>Campur tepung beras, tepung tapioka, santan, gula, garam, dan pasta pandan hingga halus.</li>
+                <li>Masak adonan di atas api kecil sambil diaduk hingga mengental.</li>
+                <li>Bungkus pisang dengan adonan hijau menggunakan daun pisang.</li>
+                <li>Kukus selama ±15 menit hingga matang, lalu dinginkan.</li>
+                <li>Masak saus santan hingga mengental, lalu dinginkan.</li>
+                <li>Sajikan pisang ijo dengan saus santan, sirup merah, susu kental manis, dan es batu.</li>
             </ol>
             </div>
         </div>
         </div>
-    </section>
 
-    <!-- Komunitas -->
-<section class="container">
-    <h2 class="section-title" id="komunitas">Komunitas Platery</h2>
 
-    <p class="community-desc">
-        Komunitas Platery adalah ruang berkumpulnya para pecinta masakan Indonesia.
-        Di sini, kamu bisa berbagi resep, berdiskusi seputar teknik memasak,
-        serta saling menginspirasi melalui kreasi dapur dari berbagai daerah.
-    </p>
+        <!-- Modal Resep 9 -->
+        <div id="kolakpisang" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <a href="#!" class="close">&times;</a>
+            <h2>Kolak Pisang</h2>
+            <img src="images/kolak.png" alt="Kolak Pisang" class="modal-img">
+            <p><strong>Oleh:</strong> Chef Nusantara</p>
+            <p><strong>Waktu Masak:</strong> 30 menit</p>
 
-    <div class="community-grid">
-        <div class="community-card">
-            <h3>Diskusi & Tips</h3>
-            <p>
-                Bertanya dan berbagi tips memasak bersama pengguna lain,
-                mulai dari pemula hingga yang sudah berpengalaman.
-            </p>
+            <h3>Bahan-bahan:</h3>
+            <ul>
+                <li>6 buah pisang kepok, potong serong</li>
+                <li>200 gram gula merah, sisir</li>
+                <li>50 gram gula pasir (sesuai selera)</li>
+                <li>500 ml santan</li>
+                <li>700 ml air</li>
+                <li>2 lembar daun pandan, simpulkan</li>
+                <li>½ sdt garam</li>
+            </ul>
+
+            <h3>Cara Membuat:</h3>
+            <ol>
+                <li>Rebus air, gula merah, gula pasir, dan daun pandan hingga gula larut.</li>
+                <li>Masukkan potongan pisang, masak hingga pisang empuk.</li>
+                <li>Tuangkan santan dan tambahkan garam.</li>
+                <li>Masak sambil diaduk perlahan agar santan tidak pecah.</li>
+                <li>Angkat dan sajikan kolak pisang selagi hangat atau dingin.</li>
+            </ol>
+            </div>
+        </div>
         </div>
 
-        <div class="community-card">
-            <h3>Berbagi Resep</h3>
-            <p>
-                Bagikan resep andalanmu dan biarkan orang lain mencoba
-                kreasi masakan khas buatanmu sendiri.
+
+
+        <!-- Komunitas -->
+        <section class="community-section">
+            <h2 class="section-title" id="komunitas">Komunitas Platery</h2>
+
+            <p class="community-desc">
+                Komunitas Platery adalah ruang berkumpulnya para pecinta masakan Indonesia.
+                Di sini, kamu bisa berbagi resep, berdiskusi seputar teknik memasak,
+                serta saling menginspirasi melalui kreasi dapur dari berbagai daerah.
             </p>
-        </div>
 
-        <div class="community-card">
-            <h3>Event & Tantangan</h3>
-            <p>
-                Ikuti berbagai event dan tantangan memasak menarik
-                yang diadakan oleh komunitas Platery.
-            </p>
-        </div>
-    </div>
+            <div class="community-grid">
+                <div class="community-card">
+                    <h3>Diskusi & Tips</h3>
+                    <p>
+                        Bertanya dan berbagi tips memasak bersama pengguna lain,
+                        mulai dari pemula hingga yang sudah berpengalaman.
+                    </p>
+                </div>
 
-    <div class="community-cta">
-        <p>
-            Punya resep favorit yang ingin kamu bagikan?
-            Ayo berkontribusi dan jadi bagian dari komunitas Platery!
-        </p>
-        <a href="form.html" class="btn-primary">
-            Bagikan Resep Saya
-        </a>
-    </div>
-</section>
+                <div class="community-card">
+                    <h3>Berbagi Resep</h3>
+                    <p>
+                        Bagikan resep andalanmu dan biarkan orang lain mencoba
+                        kreasi masakan khas buatanmu sendiri.
+                    </p>
+                </div>
+
+                <div class="community-card">
+                    <h3>Event & Tantangan</h3>
+                    <p>
+                        Ikuti berbagai event dan tantangan memasak menarik
+                        yang diadakan oleh komunitas Platery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="community-cta">
+                <p>
+                    Punya resep favorit yang ingin kamu bagikan?
+                    Ayo berkontribusi dan jadi bagian dari komunitas Platery!
+                </p>
+                <a href="form.html" class="btn-primary">
+                    Bagikan Resep Saya
+                </a>
+            </div>
+        </section>
 
 
-
-    <!-- Footer -->
-    <footer>
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Tentang ResepKu</h3>
@@ -442,6 +647,7 @@
                     <li><a href="#">Hubungi Kami</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
                 <h3>Kategori Resep</h3>
                 <ul>
@@ -451,6 +657,7 @@
                     <li><a href="#">Camilan</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
                 <h3>Komunitas</h3>
                 <ul>
@@ -460,6 +667,7 @@
                     <li><a href="#">Kompetisi</a></li>
                 </ul>
             </div>
+
             <div class="footer-section">
                 <h3>Legal</h3>
                 <ul>
@@ -470,6 +678,7 @@
             </div>
         </div>
     </footer>
+    <script src="filter.js"></script>
 </body>
 </html>
 
